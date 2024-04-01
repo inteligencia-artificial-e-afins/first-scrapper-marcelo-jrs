@@ -58,8 +58,9 @@ table_html += """
 email_sender = "fmarcelocarlos@edu.unifil.br"
 password = "mcf01234"
 email_receiver = "fmarcelocarlos@gmail.com"
+# email_receiver = "mario.adaniya@unifil.br"
 
-subject = "TESTE"
+subject = "[DS101] Marcelo Júnior"
 body = table_html
 
 em = EmailMessage()
