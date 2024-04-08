@@ -31,6 +31,7 @@ top_5_kdas = sorted_players[:5]
 
 table_html = """
 <h2>Top 5 jogadores por KDA no playoff do CBLOL</h2>
+<p>Esses foram os principais jogadorres dos playoffs, com maiores porcentagens de Kills e Assistências, e menos Mortes (Deaths)</p>
 <table>
   <tr>
     <th>Time</th>
@@ -53,10 +54,15 @@ table_html += """
 </table>
 """
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 email_sender = "fmarcelocarlos@edu.unifil.br"
-password = "mcf01234"
-email_receiver = "fmarcelocarlos@gmail.com"
-# email_receiver = "mario.adaniya@unifil.br"
+password = os.environ.get('EMAIL_PASSWORD')
+# email_receiver = "fmarcelocarlos@gmail.com"
+email_receiver = "mario.adaniya@unifil.br"
 
 subject = "[DS101] Marcelo Júnior"
 body = table_html
